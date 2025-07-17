@@ -156,7 +156,7 @@ Therefore, the square root of 101 is between 10.05 and 10.097937.<|eot_id|>
 
 ## Final conclusion and recommendation
 
-In colusion Fine-Tuning unsloth/Llama-3.2-1B-Instruct model for text generation give us good results with respective methods, but for the best results or to improve the results, you can try to fine-tune with different LLMs, instead of using QLoRa use LoRa, increase total steps more than it is in present, use more than one GPU (optional) and increase or decrease batch size per device, gradient accumulation steps and other parameters for more information please check this link [Fine-tuning Guide](https://docs.unsloth.ai/get-started/fine-tuning-guide/lora-hyperparameters-guide).
+In colusion Fine-Tuning unsloth/Llama-3.2-1B-Instruct model for text generation give us good results with respective methods, but for the best results or to improve the results, you can try to fine-tune with different LLMs, instead of using QLoRa use LoRa, increase total steps more than it is in present, use more than one GPU (optional) and increase or decrease batch size per device, gradient accumulation steps and other parameters, for more information please check this link [Fine-tuning Guide](https://docs.unsloth.ai/get-started/fine-tuning-guide/lora-hyperparameters-guide).
 
 
 
