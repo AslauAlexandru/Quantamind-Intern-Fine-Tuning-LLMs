@@ -91,16 +91,76 @@ python quantamind_intern_fine_tuning_llms.py
 ## Results and performance comparison
 
 
-After Fine-Tuning unsloth/Llama-3.2-1B-Instruct model for text generation using QLoRa method and Supervised Fine-tuning Trainer (SFT) method with [Maxime Labonne's FineTome-100k dataset](https://huggingface.co/datasets/mlabonne/FineTome-100k), we obtain the best training loss: at 16 step we have the best training loss with 0.743100.
-We have set the SFTTrainer trainer: Unsloth - 2x faster free finetuning | Num GPUs used = 1, Num examples = 100,000 | Num Epochs = 1 | Total steps = 60, Batch size per device = 2 | Gradient accumulation steps = 4, Data Parallel GPUs = 1 | Total batch size (2 x 4 x 1) = 8 and Trainable parameters = 11,272,192 of 1,247,086,592 (0.90% trained) due to QLoRa.
+After Fine-Tuning unsloth/Llama-3.2-1B-Instruct model for text generation using QLoRa method and Supervised Fine-tuning Trainer (SFT) method with [Maxime Labonne's FineTome-100k dataset](https://huggingface.co/datasets/mlabonne/FineTome-100k), we obtain the best training loss: at step 16 we have the best training loss with 0.743100.
+We have set the SFTTrainer trainer: Unsloth - 2x faster free finetuning | Num GPUs used = 1, Num examples = 100,000 | Num Epochs = 1 | Total steps = 60, Batch size per device = 2 | Gradient accumulation steps = 4, Data Parallel GPUs = 1 | Total batch size (2 x 4 x 1) = 8 and Trainable parameters = 11,272,192 of 1,247,086,592 (0.90% trained) due to QLoRa, 60/60 steps, 02:47 minutes, Epoch 0/1.
+
+Inference output:
+
+```
+
+"role": "user", "content": "Continue the fibonnaci sequence: 1, 1, 2, 3, 5, 8,"
+
+Output: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 198581, 325251, 526702, 843675, 1395076, 2175761, 3495507, 5773906, 9660250,
+
+```
 
 
+After Fine-Tuning unsloth/Llama-3.2-1B-Instruct model for text generation using QLoRa method and GRPO Trainer method with [OpenAI's famous GSM8K dataset](https://huggingface.co/datasets/openai/gsm8k), we obtain the best trainig loss, reward and reward_std: for all steps 20 we have the best training loss with 0.000000, at steps 1, 3, 4, 9, 12, 13, 16 and we have the reward with -2.500000 (the best reward), at step 2 and we have the reward with 0.216506 (the best reward_std). We have set the GRPOTrainer trainer: Unsloth - 2x faster free finetuning | Num GPUs used = 1, Num examples = 7,473 | Num Epochs = 1 | Total steps = 20, Batch size per device = 4 | Gradient accumulation steps = 4, Data Parallel GPUs = 1 | Total batch size (4 x 4 x 1) = 16, Trainable parameters = 11,272,192 of 1,247,086,592 (0.90% trained) due to QLoRa, 20/20 steps, 29:15 minutes, Epoch 0/1.
 
-After After Fine-Tuning unsloth/Llama-3.2-1B-Instruct model for text generation 
+GRPOTrainer trainer, an example output:
+```
 
+******************** Question:
+Janelle had 26 green marbles. Then she bought 6 bags of blue marbles. There were 10 marbles in each bag.  She created a gift of 6 green marbles and 8 blue marbles and gave it to a friend. How many marbles does Janelle have now? 
+Answer:
+72 
+Response:
+To find the total number of marbles Janelle had initially, we need to multiply the number of green marbles by the number of blue marbles and then add it to the initial number of green marbles.
+
+Initial green marbles = 26
+Initial blue marbles = 0 (since she didn't buy any blue marbles)
+Total initial marbles = 26 + 0 = 26
+
+She bought 6 bags of blue marbles, each containing 10 marbles. So, the total number of blue marbles is 6 * 10 = 60.
+
+Now, we need to add the total number of blue marbles to the total initial marbles:
+Total marbles = 26 + 60 = 86
+
+After giving a gift of 6 green marbles and 8 blue marbles to her friend, Janelle now has:
+Marbles left = 86 - 6 - 8 = 72
+
+So, Janelle now has 72 marbles. 
+Extracted:
+,
+******************** 
+
+```
+
+
+Inference output:
+
+```
+
+"role": "user", "content": "What is the sqrt of 101?"
+
+Output: To find the square root of 101, we can use a calculator or an online math tool. 
+
+Using a calculator: The square root of 101 is approximately 10.05.
+
+Using an online math tool, the square root of 101 is approximately 10.097937.
+
+Therefore, the square root of 101 is between 10.05 and 10.097937.<|eot_id|>
+
+```
 
 
 ## Final conclusion and recommendation
+
+In colusion Fine-Tuning unsloth/Llama-3.2-1B-Instruct model for text generation give us good results with respective methods, but for best results you can try to fine-tune with different LLMs, instead of using QLoRa use LoRa, increase total steps more than is in present, use more than one GPU,
+
+
+
+
 
 
 
