@@ -37,6 +37,21 @@ Citation Information:
 
 ## Explanation of both methods
 
+QLoRa method : 4-bit fine-tuning (```load_in_4bit = True # Use 4bit quantization to reduce memory usage (QLoRa). Can be False. ```). Slightly slower and marginally less accurate, but uses much less VRAM (4× less). 
+
+You can try with LoRA method: 16-bit fine-tuning. It's slightly faster and slightly more accurate, but consumes significantly more VRAM (4× more than QLoRA). Recommended for 16-bit environments and scenarios where maximum accuracy is required.
+
+Supervised fine-tuning (SFT) method is the most common step in post-training foundation models, and also one of the most effective. In TRL, we provide a simple API to train models with SFT in a few lines of code, for example as ```python
+training_args = SFTConfig(
+    max_length=512,
+    output_dir="/tmp",
+)
+trainer = SFTTrainer(
+    "facebook/opt-350m",
+    train_dataset=dataset,
+    args=training_args,
+)
+trainer.train() ```. 
 
 
 ## Steps to run the code
