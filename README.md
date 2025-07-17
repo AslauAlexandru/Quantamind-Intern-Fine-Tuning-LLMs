@@ -23,7 +23,6 @@ GSM8K (Grade School Math 8K) is a dataset of 8.5K high quality linguistically di
 
 Dataset Structure: ``` {
     'question': 'Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?',
-    
     'answer': 'Natalia sold 48/2 = <<48/2=24>>24 clips in May.\nNatalia sold 48+24 = <<48+24=72>>72 clips altogether in April and May.\n#### 72',
 } ```
 
