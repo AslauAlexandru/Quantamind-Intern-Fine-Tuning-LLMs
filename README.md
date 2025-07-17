@@ -21,10 +21,13 @@ GSM8K (Grade School Math 8K) is a dataset of 8.5K high quality linguistically di
 - A bright middle school student should be able to solve every problem: from the paper, "Problems require no concepts beyond the level of early Algebra, and the vast majority of problems can be solved without explicitly defining a variable."
 - Solutions are provided in natural language, as opposed to pure math expressions. From the paper: "We believe this is the most generally useful data format, and we expect it to shed light on the properties of large language models’ internal monologues""
 
-Dataset Structure: ``` {
+Dataset Structure: 
+```
+{
     'question': 'Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?',
     'answer': 'Natalia sold 48/2 = <<48/2=24>>24 clips in May.\nNatalia sold 48+24 = <<48+24=72>>72 clips altogether in April and May.\n#### 72',
-} ```.
+}
+```
 
 
 Citation Information:
@@ -77,7 +80,7 @@ Inference method: To test the model after fine-tuning, we need to activate fast 
 ## Steps to run the code
 
 You can run from Google Colab here: [Quantamind_Intern_Fine_Tuning_LLMs.ipynb](https://colab.research.google.com/drive/1viDzLJ1wQOq7FWUoa-D6kwl2jheB4vYV?usp=sharing).
-You can access the Google Colab from [Quantamind_Intern_Fine_Tuning_LLMs.ipynb](https://colab.research.google.com/drive/1viDzLJ1wQOq7FWUoa-D6kwl2jheB4vYV?usp=sharing) an after make a copy to run in your Google Colab account.
+You can access the Google Colab from this link [Quantamind_Intern_Fine_Tuning_LLMs.ipynb](https://colab.research.google.com/drive/1viDzLJ1wQOq7FWUoa-D6kwl2jheB4vYV?usp=sharing) and after make a copy to run in your Google Colab account.
 
 You can run as a [python script](https://github.com/AslauAlexandru/Quantamind-Intern-Fine-Tuning-LLMs/blob/main/quantamind_intern_fine_tuning_llms.py): 
 ```python
@@ -93,7 +96,7 @@ We have set the SFTTrainer trainer: Unsloth - 2x faster free finetuning | Num GP
 
 
 
-After 
+After After Fine-Tuning unsloth/Llama-3.2-1B-Instruct model for text generation 
 
 
 
