@@ -44,15 +44,17 @@ You can try with LoRA method: 16-bit fine-tuning. It's slightly faster and sligh
 Supervised fine-tuning (SFT) method is the most common step in post-training foundation models, and also one of the most effective. In TRL, we provide a simple API to train models with SFT in a few lines of code, for example as 
 ``` python
 training_args = SFTConfig(
-    max_length=512,
-    output_dir="/tmp",
+    max_length=...,
+    output_dir=...,
+    ...
 )
 trainer = SFTTrainer(
-    "facebook/opt-350m",
-    train_dataset=dataset,
-    args=training_args,
+    "facebook/opt-350m", # example of model/LLM
+    train_dataset=...,
+    args=...,
+    ...
 )
-trainer.train() ```. 
+trainer.train()```. 
 
 
 ## Steps to run the code
