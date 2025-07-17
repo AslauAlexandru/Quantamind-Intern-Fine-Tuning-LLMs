@@ -78,9 +78,10 @@ Inference method: To test the model after fine-tuning, we need to activate fast 
 
 You can run from Google Colab here: [Quantamind_Intern_Fine_Tuning_LLMs.ipynb](https://colab.research.google.com/drive/1viDzLJ1wQOq7FWUoa-D6kwl2jheB4vYV?usp=sharing).
 
-You can run as a [python script](quantamind_intern_fine_tuning_llms.py): 
+You can run as a [python script](https://github.com/AslauAlexandru/Quantamind-Intern-Fine-Tuning-LLMs/blob/main/quantamind_intern_fine_tuning_llms.py): 
 ```python
 
+```
 
 ## Results and performance comparison
 
