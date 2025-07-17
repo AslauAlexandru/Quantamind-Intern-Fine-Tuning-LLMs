@@ -81,6 +81,7 @@ You can run from Google Colab here: [Quantamind_Intern_Fine_Tuning_LLMs.ipynb](h
 You can run as a [python script](https://github.com/AslauAlexandru/Quantamind-Intern-Fine-Tuning-LLMs/blob/main/quantamind_intern_fine_tuning_llms.py): 
 ```python
 
+python quantamind_intern_fine_tuning_llms.py
 ```
 
 ## Results and performance comparison
