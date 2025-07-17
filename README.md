@@ -54,7 +54,8 @@ trainer = SFTTrainer(
     args=...,
     ...
 )
-trainer.train()```. 
+trainer.train()
+```. 
 
 
 ## Steps to run the code
